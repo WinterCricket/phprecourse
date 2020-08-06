@@ -47,3 +47,12 @@ class welcome{
 // Create object from class
 $msg = new welcome;
 var_dump($msg);
+
+echo "<br>";
+
+$x = "Hi";
+$x = null;
+var_dump($x);
+
+echo "<br>";
+
