@@ -1,5 +1,7 @@
 <?php  
 
+//variables
+
 $var = "PHP Powers almost 80% of the Modern Web.";
 echo $var . "<br>";
 
@@ -11,5 +13,5 @@ echo "$var $var2" ."<br>";
 
 //constants
 
-define("Ciao", "Echo yourself", true);
-echo ciao;
+define("CIAO", "Echo yourself or sod off!", true);
+echo CIAO ."<br>";
