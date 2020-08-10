@@ -16,6 +16,12 @@ echo "<h1>" . $var2 . "</h1>";
 
 echo "<br>";
 
+
+
+
+
+
+
 $fname = 'Mica';
 $mname = 'Todd';
 $lname = 'Sorin';
@@ -29,3 +35,16 @@ echo "$fname $mname $lname";
 
 
 echo "<br>";
+
+print $fname .' '. $mname . ' ' . $lname;
+echo "<br>";
+
+print "$fname $mname $lname";
+
+echo "<br>";
+//below you can't do commas with print
+echo "John", " Michael", " Smith";
+
+
+echo "<br>";
+?>
