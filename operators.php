@@ -77,4 +77,64 @@ var_dump( $x <= $y );
 echo "<br>";  // Outputs: boolean false
 var_dump( $x >= $y );
 echo "<br>";  // Outputs: bool
+
+?>
+<!-- //The increment/decrement operators are used to increment/decrement a variable’s value
+ -->
+<h1>Increment/decrement operators</h1>
+
+<?php 
+$a = 10;
+echo ++ $a; // Outputs: 11
+echo '<br>';
+echo $a;   // Outputs: 11
+echo '<br>';
+
+$b = 10;
+echo $b ++; // Outputs: 10
+echo '<br>';
+echo $b;   // Outputs: 11
+echo '<br>';
+
+$c = 10;
+echo -- $c; // Outputs: 9
+echo '<br>';
+echo $c;   // Outputs: 9
+echo '<br>';
+
+$d = 10;
+echo $d --; // Outputs: 10
+echo '<br>';
+echo $d;   // Outputs: 9
+echo '<br>';
+
+ ?>
+
+ <h1>Logical Operators</h1>
+
+ <?php 
+
+$age = 21;
+if ( $age == 21 ) {
+	echo "You are $age years old.";
+} else {
+	echo "You are not $age years old.";
+}
+
+  ?>
+
+  <h1>String Operators</h1>
+
+  <?php
+$x = "Hello";
+$y = " World!";
+echo $x . $y; // Outputs: Hello World!
+
+$x .= $y;
+echo $x; // Outputs: Hello World!
+echo '<br>';
+// Reset the $x and $y variables
+$x = "Hello";
+$y = " World!";
+echo $x .= $y; // Outputs: Hello World!
 ?>
