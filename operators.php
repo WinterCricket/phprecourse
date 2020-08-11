@@ -138,3 +138,53 @@ $x = "Hello";
 $y = " World!";
 echo $x .= $y; // Outputs: Hello World!
 ?>
+
+<h1>Array Operators</h1>
+
+<?php
+$x = array( "a" => "Red", "b" => "Green", "c" => "Blue" );
+$y = array( "u" => "Yellow", "v" => "Orange", "w" => "Pink" );
+$z = $x + $y; // Union of $x and $y
+var_dump( $z );
+echo '<br>';
+var_dump( $x == $y );   // Outputs: boolean false
+echo '<br>';
+var_dump( $x === $y );  // Outputs: boolean false
+echo '<br>';
+var_dump( $x != $y );   // Outputs: boolean true
+echo '<br>';
+var_dump( $x <> $y );   // Outputs: boolean true
+var_dump( $x !== $y );  // Outputs: boolean true
+?>
+<h1>Spaceship Operator New in PHP 7</h1>
+<?php
+// Comparing Integers
+echo 1 <=> 1; // Outputs: 0
+echo '<br>';
+echo 1 <=> 2; // Outputs: -1
+echo '<br>';
+echo 2 <=> 1; // Outputs: 1
+echo '<br>';
+
+// Comparing Floats
+echo 1.5 <=> 1.5; // Outputs: 0
+echo '<br>';
+echo 1.5 <=> 2.5; // Outputs: -1
+echo '<br>';
+echo 2.5 <=> 1.5; // Outputs: 1
+echo '<br>';
+
+// Comparing Strings
+echo "x" <=> "x"; // Outputs: 0
+echo '<br>';
+echo "x" <=> "y"; // Outputs: -1
+echo '<br>';
+echo "y" <=> "x"; // Outputs: 1
+?>
+<h2>My experiment</h2>
+<?php 
+echo "3" <=> "4";//seems to go by number not spelling
+echo '<br>';
+echo "4" <=> "3";
+ ?> 		
+
