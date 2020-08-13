@@ -186,5 +186,57 @@ echo "y" <=> "x"; // Outputs: 1
 echo "3" <=> "4";//seems to go by number not spelling
 echo '<br>';
 echo "4" <=> "3";
- ?> 		
+ ?> 
 
+<h1>Conditional Assignment Operators</h1>
+
+<h2>Ternary operator example</h2>
+<?php
+$var = 5;
+// Ternary operator example
+$var2 = $var > 2 ? 'yes' : 'no'; // returns yes
+echo $var2;
+?>
+<h2>Null Coalescing and then Ternary Operator</h2>
+<?php
+// Fetches the value of $_GET['user']
+// and returns 'nobody'if it doesn't exist.
+
+// Null Coalescing example
+
+echo $username = $_GET['user'] ?? 'nobody';
+
+// This is equivalent to:
+// Ternary operator example
+echo $username = isset( $_GET['user'] ) ? $_GET['user'] : 'nobody';
+
+// Coalescing can be chained: this will return the first
+// defined value out of $_GET['user'], $_POST['user'], and
+// 'nobody'.
+echo $username = $_GET['user'] ?? $_POST['user'] ?? 'nobody';
+?>
+
+<h2>if isset else example</h2>
+
+<?php
+ $name1 = 'Jay';
+if ( isset( $name1 ) ) {
+	echo $name1;
+} else {
+	echo '$name1 variable not set';
+}
+?>
+
+<h2>Using the ternary operator to achieve the same result</h2>
+
+<?php
+$name2 = 'Jaysoon';
+echo $namecheck = isset( $name2 ) ? $name2 : '$name2 variable not set';
+?>
+
+<h2>Use Null coalescing to achieve the same result</h2>
+
+<?php
+$name3 = null;
+echo $namechk = $name3 ?? '$name3 variable not set';
+?>
