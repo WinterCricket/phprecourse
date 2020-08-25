@@ -145,8 +145,10 @@ if ($x == 60 || $y == 30) {
   echo '<h3>$x is equal to 60 or $y is equal to 30.</h3>' ;
 }
 
-if ($x == 60 xor $y == 10) {
+if ($x == 60 xor $y == 40) {
     echo "<h3>True if either is true but not both.</h3>";
+} else {
+	echo "<h3>They can't both be true.</h3>";
 }
 
 if ($x !== 55) {
@@ -157,16 +159,16 @@ if ($x !== 55) {
   <h1>String Operators</h1>
 
   <?php
-$x = "Hello";
-$y = " World!";
+$x = " Hello ";
+$y = "  World! ";
 echo $x . $y; // Outputs: Hello World!
 
 $x .= $y;
 echo $x; // Outputs: Hello World!
-echo '<br>';
+
 // Reset the $x and $y variables
-$x = "Hello";
-$y = " World!";
+$x = " Hello ";
+$y = " World! ";
 echo $x .= $y; // Outputs: Hello World!
 ?>
 
@@ -186,6 +188,7 @@ var_dump( $x != $y );   // Outputs: boolean true
 echo '<br>';
 var_dump( $x <> $y );   // Outputs: boolean true
 var_dump( $x !== $y );  // Outputs: boolean true
+
 ?>
 <h1>Spaceship Operator New in PHP 7</h1>
 <?php
@@ -223,6 +226,7 @@ echo "4" <=> "3";
 
 <h2>Ternary operator example</h2>
 <?php
+
 $var = 5;
 // Ternary operator example
 $var2 = $var > 2 ? 'yes' : 'no'; // returns yes
@@ -268,6 +272,9 @@ echo $namecheck = isset( $name2 ) ? $name2 : '$name2 variable not set';
 <h2>Use Null coalescing to achieve the same result</h2>
 
 <?php
-$name3 = null;
-echo $namechk = $name3 ?? '$name3 variable not set';
+$name3 = "<h3>Jayjay</h3>";
+// $name3 = NULL;
+$namecheck = $name3 ?? '<h3>$name3 variable not set</h3>';
+var_dump($namecheck);
+
 ?>
