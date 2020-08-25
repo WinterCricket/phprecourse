@@ -2,6 +2,8 @@
 
 <?php
 
+include "../studiowebPHP/style.php";
+
 //arithmetic operators
 ?>
 <h1>Arithmetic Operators:</h1>
@@ -77,6 +79,13 @@ var_dump( $x <= $y );
 echo "<br>";  // Outputs: boolean false
 var_dump( $x >= $y );
 echo "<br>";  // Outputs: bool
+// real world example
+$age = 20;
+if($age >= 21){
+	echo "<h2>You are considered an adult and can do adult type disgusting activities, such as destroy the world.</h2>";
+}else {
+	echo "<h2>You're a pipsqueek, a fledgling, and can't do all the stupid, self-justified nonsense adults get up to.</h2>";
+}
 
 ?>
 <!-- //The increment/decrement operators are used to increment/decrement a variable’s value
@@ -112,16 +121,38 @@ echo '<br>';
 
  <h1>Logical Operators</h1>
 
- <?php 
+ <?php
+$x = 60;
+$y = 40;
 
-$age = 21;
-if ( $age == 21 ) {
-	echo "You are $age years old.";
+if ($x == 60 and $y == 40) {
+  echo '<h3>$x is equal to 60 and $y is equal to 40.</h3>' ;
 } else {
-	echo "You are not $age years old.";
+  echo "<h3>Sorry, they both need to match </h3>";
 }
 
-  ?>
+if ($x == 60 && $y == 2) {
+  echo "<h3>Both are true </h3>";
+} else {
+  echo "<h3>Both need to be true. </h3>";
+}
+
+if ($x == 60 or $y == 30) {
+  echo '<h3>$x is equal to 60 or $y is equal to 30.</h3>' ;
+}
+
+if ($x == 60 || $y == 30) {
+  echo '<h3>$x is equal to 60 or $y is equal to 30.</h3>' ;
+}
+
+if ($x == 60 xor $y == 10) {
+    echo "<h3>True if either is true but not both.</h3>";
+}
+
+if ($x !== 55) {
+  echo '<h3>True if $x is not true</h3>';
+}
+?>
 
   <h1>String Operators</h1>
 
